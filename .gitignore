@@ -2,3 +2,7 @@
 /.vs
 .vs/
 perfmon/.vs
+
+**/Debug
+**/obj/*
+**/obj
