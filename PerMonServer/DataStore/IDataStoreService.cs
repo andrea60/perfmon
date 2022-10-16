@@ -4,21 +4,27 @@ namespace PerMonServer.DataStore
 {
     public interface IDataStoreService
     {
+
         /// <summary>
-        /// Register an agent to the registry
+        /// Saves an agent, upserting
         /// </summary>
-        /// <param name="name">Name of the agent</param>
-        /// <param name="device">Device monitored by this agent</param>
-        /// <param name="measures">List of measures monitored by this agent</param>
-        /// <returns>The UUID of the agent</returns>
-        Task<string> RegisterAgentAsync(string name, string device, IEnumerable<Measure> measures);
+        /// <param name="agent"></param>
+        /// <returns></returns>
+        Task<Agent> SaveAgentAsync(Agent agent);
+
+        /// <summary>
+        /// Upsert measures
+        /// </summary>
+        /// <param name="measures"></param>
+        /// <returns></returns>
+        Task SaveMeasuresAsync(IEnumerable<Measure> measures);
 
         /// <summary>
         /// Returns a single agent
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        Task<Agent> GetAgentAsync(string name);
+        Task<Agent?> GetAgentAsync(string name);
         
         /// <summary>
         /// Search for different agents

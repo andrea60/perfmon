@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PerMonServer.DataStore.SQL;
 
@@ -10,9 +11,10 @@ using PerMonServer.DataStore.SQL;
 namespace PerMonServer.DataStore.SQL.Migrations
 {
     [DbContext(typeof(PerfMonDbContext))]
-    partial class PerfMonDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221016094250_FK_Measure_To_Agent")]
+    partial class FK_Measure_To_Agent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.10");
