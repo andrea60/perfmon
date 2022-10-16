@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PerMonServer.Models
 {
@@ -8,5 +9,7 @@ namespace PerMonServer.Models
         public string UUID { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string Unit { get; set; } = string.Empty;
+        [ForeignKey("")]
+        public string AgentUUID { get; set; }
     }
 }
