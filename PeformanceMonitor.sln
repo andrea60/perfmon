@@ -3,12 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerMonServer", "PerMonServer\PerMonServer.csproj", "{D8972FBF-3A1C-4550-B198-A958FB94BBA4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{482EE691-E6BF-412C-BF61-E344CD32D53A}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfMon.Business", "PerfMon.Business\PerfMon.Business.csproj", "{166537F8-6133-4CD0-B05D-8D9007F0BA06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfMon.Infrastructure", "PerfMon.Infrastructure\PerfMon.Infrastructure.csproj", "{465C3529-1182-454F-A497-5E8BC2C78C10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfMon.WebAPI", "PerfMon.WebAPI\PerfMon.WebAPI.csproj", "{2F032B70-940A-48F4-B52E-E6F561F868A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{1FCC8D87-8CF8-4110-B820-14615F6C44A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{31E68C82-4182-43B7-A319-791C6E5D635F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerfMon.Business.Tests", "PerfMon.Business.Tests\PerfMon.Business.Tests.csproj", "{3D61FD99-8ADE-4B80-BFF4-231CCBA6A3A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,13 +26,28 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D8972FBF-3A1C-4550-B198-A958FB94BBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8972FBF-3A1C-4550-B198-A958FB94BBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8972FBF-3A1C-4550-B198-A958FB94BBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8972FBF-3A1C-4550-B198-A958FB94BBA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{166537F8-6133-4CD0-B05D-8D9007F0BA06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{166537F8-6133-4CD0-B05D-8D9007F0BA06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{166537F8-6133-4CD0-B05D-8D9007F0BA06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{166537F8-6133-4CD0-B05D-8D9007F0BA06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{465C3529-1182-454F-A497-5E8BC2C78C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{465C3529-1182-454F-A497-5E8BC2C78C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{465C3529-1182-454F-A497-5E8BC2C78C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{465C3529-1182-454F-A497-5E8BC2C78C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F032B70-940A-48F4-B52E-E6F561F868A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F032B70-940A-48F4-B52E-E6F561F868A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F032B70-940A-48F4-B52E-E6F561F868A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F032B70-940A-48F4-B52E-E6F561F868A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D61FD99-8ADE-4B80-BFF4-231CCBA6A3A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D61FD99-8ADE-4B80-BFF4-231CCBA6A3A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D61FD99-8ADE-4B80-BFF4-231CCBA6A3A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D61FD99-8ADE-4B80-BFF4-231CCBA6A3A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D61FD99-8ADE-4B80-BFF4-231CCBA6A3A2} = {31E68C82-4182-43B7-A319-791C6E5D635F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {06952544-9751-4BA1-8945-F932B0DEE08A}
