@@ -14,5 +14,11 @@ namespace PerfMon.Business.Commands
     public record AgentMeasure(string name, string unit, MeasureType type);
 
 
-    public record AgentRegistrationResult(string mqttChannel);
+    public record AgentRegistrationResult(RegistrationResult status, string mqtt, string password);
+
+    public enum RegistrationResult
+    {
+        Success,
+        Failure
+    }
 }

@@ -17,8 +17,7 @@ namespace PerfMon.Business.Models.Agent
         public DateTime LastSeen { get; private set; }
         public bool Inactive { get; private set; } = false;
         public IEnumerable<Measure> Measures => _measures.AsEnumerable();
-        public string MqttChannel { get; private set; } = string.Empty;
-        public string MqttPassword { get; private set; } = string.Empty;
+        public MqttChannel? Mqtt { get; private set; }
 
         // for ef
         private Agent() { } 
@@ -28,6 +27,7 @@ namespace PerfMon.Business.Models.Agent
             LastSeen = DateTime.Now;
             Name = name;
             _measures = new List<Measure>();
+            Mqtt = null;
         }
 
 
@@ -70,10 +70,9 @@ namespace PerfMon.Business.Models.Agent
             return true;
         }
         
-        public void AssignMqttChannel(MqttChannelInfo channel)
+        public void AssignMqttChannel(MqttChannel channel)
         {
-            MqttChannel = channel.Name;
-            MqttPassword = channel.Password;
+            Mqtt = channel;
         }
         public Measure? GetMeasure(string uniqueName)
         {

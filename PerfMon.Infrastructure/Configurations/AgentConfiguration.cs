@@ -18,6 +18,8 @@ namespace PerfMon.Infrastructure.Configurations
             builder.HasMany(e => e.Measures)
                     .WithOne()
                     .HasForeignKey(e => e.AgentName);
+
+            builder.OwnsOne(e => e.Mqtt);
         }
     }
 }

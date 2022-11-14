@@ -38,12 +38,13 @@ namespace PerfMon.Business.Handlers
             }
 
             // generate the channel
-            agent.AssignMqttChannel(mqttChannelGenerator.GenerateChannel(agent));
+            var mqtt = mqttChannelGenerator.GenerateChannel(agent);
+            agent.AssignMqttChannel(mqtt);
 
             // emit event
             await publisher.Publish(new AgentRegisteredEvent());
 
-            return new AgentRegistrationResult(agent.MqttChannel);
+            return new AgentRegistrationResult(RegistrationResult.Success, mqtt.Channel, mqtt.Password);
         }
     }
 }

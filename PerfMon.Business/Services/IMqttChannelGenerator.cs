@@ -9,27 +9,16 @@ namespace PerfMon.Business.Services
 {
     public interface IMqttChannelGenerator
     {
-        MqttChannelInfo GenerateChannel(Agent agent);
+        MqttChannel GenerateChannel(Agent agent);
     }
 
-    public class MqttChannelInfo
-    {
-        public string Name { get; private set; }
-        public string Password { get; private set; }
-
-        public MqttChannelInfo(string name, string password)
-        {
-            Name = name;
-            Password = password;
-        }
-    }
-
+   
     public class MqttChannelGenerator : IMqttChannelGenerator
     {
-        public MqttChannelInfo GenerateChannel(Agent agent)
+        public MqttChannel GenerateChannel(Agent agent)
         {
             var pw = GenerateRandomPassword(12);
-            return new MqttChannelInfo(agent.Name, pw);
+            return new MqttChannel(agent.Name, pw);
         }
         private string GenerateRandomPassword(int length)
         {

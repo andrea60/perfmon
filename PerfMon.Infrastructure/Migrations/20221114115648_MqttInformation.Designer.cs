@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PerfMon.Infrastructure;
 
@@ -10,9 +11,11 @@ using PerfMon.Infrastructure;
 namespace PerfMon.Infrastructure.Migrations
 {
     [DbContext(typeof(PerfMonDbContext))]
-    partial class PerfMonDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221114115648_MqttInformation")]
+    partial class MqttInformation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
